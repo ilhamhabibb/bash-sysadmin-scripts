@@ -79,7 +79,7 @@ Direktori ada
 Backup user berhasil.
 ```
 
-*(Tambahkan screenshot atau GIF terminal di sini — lihat folder `examples/`)*
+
 
 ## Struktur Proyek
 
