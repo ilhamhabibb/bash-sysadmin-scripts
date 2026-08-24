@@ -8,7 +8,7 @@ Kumpulan script bash untuk otomatisasi tugas administrasi user Linux sehari-hari
 - [Instalasi](#instalasi)
 - [Cara Pakai](#cara-pakai)
   - [buat_user.sh](#buat_usersh)
-  - [deluser.sh](#deluser sh)
+  - [deluser.sh](#delusersh)
   - [backup_user.sh](#backup_usersh)
 - [Contoh Output](#contoh-output)
 - [Struktur Proyek](#struktur-proyek)
