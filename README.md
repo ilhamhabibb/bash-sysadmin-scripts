@@ -7,8 +7,13 @@ Kumpulan script bash untuk otomatisasi tugas administrasi Linux sehari-hari: mem
 - [Requirement](#requirement)
 - [Instalasi](#instalasi)
 - [Cara Pakai](#cara-pakai)
+  - [buat_user.sh](#buat_usersh)
+  - [deluser.sh](#delusersh)
+  - [backup_user.sh](#backup_usersh)
+  - [disk_monitor.sh](#disk_monitorsh)
 - [Automasi dengan Cron](#automasi-dengan-cron)
 - [Catatan Teknis: Yang Saya Pelajari soal Cron](#catatan-teknis-yang-saya-pelajari-soal-cron)
+- [Contoh Output](#contoh-output)
 - [Struktur Proyek](#struktur-proyek)
 - [Known Limitations](#known-limitations)
 
@@ -30,8 +35,8 @@ Kumpulan script bash untuk otomatisasi tugas administrasi Linux sehari-hari: mem
 ## Instalasi
 
 ```bash
-git clone https://github.com/USERNAME_GITHUB/linux-sysadmin-toolkit.git
-cd linux-sysadmin-toolkit
+git clone https://github.com/ilhamhabibb/Linux-Sysadmin-Toolkit.git
+cd Linux-Sysadmin-Toolkit
 chmod +x *.sh
 ```
 
@@ -97,6 +102,18 @@ Saat login manual, `$PATH` biasanya mencakup banyak folder (`/usr/local/bin`, `/
 
 **2. `$HOME` untuk root berbeda dengan `$HOME` user biasa.**
 Kalau sebuah script bergantung pada file konfigurasi di home directory (misalnya file tersembunyi seperti `~/.beberapa_config`), lokasi file itu ikut berubah tergantung siapa yang menjalankan script. Saat dites manual dengan `sudo`, `$HOME` kadang masih mengarah ke home directory user biasa. Tapi saat dijalankan murni lewat crontab root, `$HOME` root mengarah ke `/root`, bukan `/home/nama_user`. Kalau ada file pendukung yang dibutuhkan script, sebaiknya file itu memang ditempatkan di lokasi yang konsisten dengan user yang benar-benar menjalankan cron job-nya (root), bukan menumpang di folder milik user lain.
+
+## Contoh Output
+
+```
+$ sudo ./backup_user.sh asep
+Nama user tersedia
+Direktori ada
+tar: Removing leading `/' from member names
+Backup user berhasil.
+```
+
+*(Tambahkan screenshot atau GIF terminal di sini untuk mempercantik dokumentasi.)*
 
 ## Struktur Proyek
 
