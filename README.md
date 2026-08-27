@@ -113,7 +113,6 @@ tar: Removing leading `/' from member names
 Backup user berhasil.
 ```
 
-*(Tambahkan screenshot atau GIF terminal di sini untuk mempercantik dokumentasi.)*
 
 ## Struktur Proyek
 
